@@ -1,0 +1,87 @@
+/* Allmänna stilregler för alla element */
+* {
+    margin: 4px;
+    transition-duration: 0.1s;
+    padding: 10px;
+}
+
+/* Stilregler för top container med innehåll */
+.top-div {
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* Stilregler för en container som centreras horisontellt och vertikalt */
+.center_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stilregler för en container som centreras horisontellt och har en rad med element */
+.center_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    width: 90%;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 15px;
+    align-items: center;
+    background: rgb(120, 45, 145);
+    border: 1px solid white;
+}
+
+/* Stilregler för en text med good_vibes */
+.good_vibes {
+    margin-bottom: 10px;
+}
+
+/* Stilregler för bilder */
+img {
+    max-width: 150px;
+    margin-right: 10px; /* Lade till ett marginalhöger för mellanrum mellan bild och knappar */
+}
+
+/* Stilregler för hover-effekt på knappar */
+button:hover {
+    background: rgb(145, 120, 45);
+}
+
+/* Stilregler för knappar */
+button {
+    height: 125px;
+    width: 125px;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    background: rgb(45, 145, 120);
+}
+
+/* Media query för mindre skärmar */
+@media (max-width: 650px) {
+    .center_div {
+        width: 100%;
+    }
+
+    .center_container {
+        flex-direction: column;
+    }
+
+    .good_vibes {
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 100px;
+        margin-right: 0; /* Inget mellanrum till höger för bilder */
+        margin-bottom: 10px; /* Extra mellanrum nedåt för bilder */
+    }
+}
